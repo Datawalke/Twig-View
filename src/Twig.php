@@ -73,6 +73,15 @@ class Twig implements \ArrayAccess
         $this->environment->addExtension($extension);
     }
 
+    /**
+     * Proxy method to add a simple function to the Twig environment
+     *
+     * @param \Twig_SimpleFunction $function
+     */
+    public function addFunction($function)
+    {
+        $this->environment->addFunction($function);
+    }
 
     /**
      * Fetch rendered template
